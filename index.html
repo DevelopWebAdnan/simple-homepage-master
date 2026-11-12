@@ -45,17 +45,21 @@
 
       /* navbar styles */
       .navbar {
-        border: 5px dashed saddlebrown;
+        /* border: 5px dashed saddlebrown; */
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
-      .nav-image {
-        border: 4px dashed darkgoldenrod;
+      /* .nav-image {
+        border: 4px dashed darkmagenta;
+      } */
+      .nav-image img {
+        width: 100%;
       }
       .nav-list {
-        border: 3px dashed darkmagenta;
+        /* border: 3px dashed steelblue; */
         display: flex;
-        gap: 40px;
+        gap: 36px;
       }
       .nav-list li {
         list-style: none;
@@ -63,23 +67,28 @@
       }
       .nav-list li a {
         text-decoration: none;
-        color: black;
+        color: #111729;
       }
       .nav-list li:first-of-type a {
         color: #2A4DD0;
         /* text-decoration: underline; */
         border-bottom: 3px solid #2A4DD0;
       }
+      .hamburger-menu {
+        display: none;
+      }
       .theme-toggle {
-        border: 3px dashed steelblue;
+        border: 3px dashed darkgoldenrod;
         border-radius: 50px;
         background-color: #223344;
+        padding: 1px;
       }
       .theme-toggle button {
-        border-radius: 50px;
+        border-radius: 50%;
         border: none;
         font-size: 1rem;
         background-color: #223344;
+        padding: 1px;
       }
       /* .theme-toggle .moon {} */
       .theme-toggle .sun {
@@ -89,24 +98,39 @@
 
       /* banner styles */
       .banner{
-        border: 5px dashed darkcyan;
-        margin: 100px auto;
+        /* border: 5px dashed darkcyan; */
+        margin: 80px auto 50px;
         display: flex;
+        gap: 50px;
+        justify-content: space-between;
+        /* align-items: center; */
       }
-      .text-content {
-        border: 4px dashed darkkhaki;
+      .banner .text-content {
+        /* border: 4px dashed darkkhaki; */
+        /* max-width: 570px; */
+        /* width: 50%; */
+        flex: 1;
       }
       .banner .text-content .sub-title {
         text-transform: uppercase;
+        font-weight: 600;
       }
       .banner .text-content .title {
         font-size: 3.75rem;
         color: #223344;
+        margin: 16px 0;
+        /* max-width: 300px; */
+        /* border: 3px dashed steelblue; */
       }
-      /* .banner .text-content .buttons {
-        font-size: 1rem;
-        font-weight: 600;
-      } */
+      .banner .text-content .description {
+        margin: 36px auto 20px;
+        font-weight: 500;
+      }
+      .banner .text-content .buttons {
+        /* font-size: 1rem;
+        font-weight: 600; */
+        margin: 20px auto 36px;
+      }
       .banner .text-content .buttons button {
         border: none;
         background-color: #2A4DD0;
@@ -115,6 +139,7 @@
         padding: 16px 32px;
         border-radius: 12px;
         font-size: 1rem;
+        text-transform: uppercase;
       }
       .banner .text-content .buttons a {
          color: #2A4DD0;
@@ -126,9 +151,26 @@
       }
       .banner .text-content .bottom {
         font-size: 0.875rem;
+        display: flex;
+        gap: 16px;
+        /* justify-content: space-between; */
       }
-      .img-content {
-        border: 4px dashed salmon;
+      .banner .text-content .bottom .done {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: 500;
+      }
+      .banner .img-content {
+        /* border: 4px dashed salmon; */
+        flex: 1;
+        /* overflow: hidden; */
+        /* width: 50%; */
+      }
+      .banner .img-content img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
       }
 
       .author-info {
@@ -140,6 +182,79 @@
 
       .author-info a {
         text-decoration: none;
+      }
+
+      /* responsive styles */
+      @media screen and (max-width: 640px) {
+        .header {
+        /* background-color: #F2F9FE; */
+        padding: 12px 4px;
+      }
+       .nav-list {
+        /* border: 3px dashed darkmagenta; */
+        display: none;
+        /* gap: 40px; */
+      }
+      .hamburger-menu {
+        display: block;
+      }
+      .theme-toggle {
+        /* border: 3px dashed steelblue;
+        border-radius: 50px;
+        background-color: #223344; */
+        display: none;
+      }
+      
+      .banner{
+        /* border: 5px dashed darkcyan; */
+        margin: 30px auto 0;
+        /* display: flex; */
+        flex-direction: column-reverse;
+      }
+      .banner .text-content {
+        /* border: 4px dashed darkkhaki; */
+        /* max-width: 400px; */
+        /* flex: 1; */
+        /* width: 100%; */
+      }
+       .banner .text-content .title {
+        font-size: 2.75rem;
+        /* color: #223344;
+        margin: 16px auto; */
+        /* max-width: 300px; */
+      }
+       .banner .text-content .description {
+        /* margin: 32px auto 24px; */
+        color: #909193;
+      }
+       /* .banner .text-content .bottom {
+        font-size: 0.75rem;
+        display: flex;
+        gap: 12px;
+      } */
+      .banner .text-content .bottom .done {
+        /* display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: 500; */
+        color: #909193;
+      }
+      .banner .img-content {
+        /* border: 4px dashed salmon;
+        flex: 1; */
+        width: 75%;
+        margin: 0 auto;
+      }
+      }
+
+      /* responsive for tablet devices */
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+       .banner .text-content .description {
+        color: #909193;
+      }
+      .banner .text-content .bottom .done {
+        color: #909193;
+      } 
       }
     </style>
   </head>
@@ -154,6 +269,7 @@
           <li><a href="">Resource</a></li>
           <li><a href="">Contact</a></li>
         </ul>
+        <div class="hamburger-menu"><img src="resources/hamburger-button.svg" alt="hamburger-button"></div>
         <div class="theme-toggle">
             <button class="moon"><img src="resources/Moon_fill_light.svg" alt="Moon_fill_light"></button>
             <button class="sun"><img src="resources/Sun_fill.svg" alt="Sun_fill"></button>
@@ -170,10 +286,14 @@
               <button>Get Started</button><a href="">Get live demo</a>
             </div>
             <div class="bottom">
-              <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
-              <p>No credit card required</p>
-              <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
-              <p>No software to install</p>
+              <div class="done">
+                <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+                <p>No credit card required</p>
+              </div>
+              <div class="done">
+                <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+                <p>No software to install</p>
+              </div>
             </div>
           </div>
           <div class="img-content">
