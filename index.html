@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Simple Homepage - Alarado | devChallenges.io</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+    <style>
+      .poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        font-size: 1.125rem;
+        color: #111729;
+      }
+
+      /* header styles */
+      .header {
+        background-color: #F2F9FE;
+        padding: 24px 50px;
+      }
+
+      /* navbar styles */
+      .navbar {
+        border: 5px dashed saddlebrown;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-image {
+        border: 4px dashed darkgoldenrod;
+      }
+      .nav-list {
+        border: 3px dashed darkmagenta;
+        display: flex;
+        gap: 40px;
+      }
+      .nav-list li {
+        list-style: none;
+        font-weight: 600;
+      }
+      .nav-list li a {
+        text-decoration: none;
+        color: black;
+      }
+      .nav-list li:first-of-type a {
+        color: #2A4DD0;
+        /* text-decoration: underline; */
+        border-bottom: 3px solid #2A4DD0;
+      }
+      .theme-toggle {
+        border: 3px dashed steelblue;
+        border-radius: 50px;
+        background-color: #223344;
+      }
+      .theme-toggle button {
+        border-radius: 50px;
+        border: none;
+        font-size: 1rem;
+        background-color: #223344;
+      }
+      /* .theme-toggle .moon {} */
+      .theme-toggle .sun {
+        /* border-radius: 50px; */
+        background-color: #F2F9FE;
+      }
+
+      /* banner styles */
+      .banner{
+        border: 5px dashed darkcyan;
+        margin: 100px auto;
+        display: flex;
+      }
+      .text-content {
+        border: 4px dashed darkkhaki;
+      }
+      .banner .text-content .sub-title {
+        text-transform: uppercase;
+      }
+      .banner .text-content .title {
+        font-size: 3.75rem;
+        color: #223344;
+      }
+      /* .banner .text-content .buttons {
+        font-size: 1rem;
+        font-weight: 600;
+      } */
+      .banner .text-content .buttons button {
+        border: none;
+        background-color: #2A4DD0;
+        color: #F2F9FE;
+        font-weight: 600;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-size: 1rem;
+      }
+      .banner .text-content .buttons a {
+         color: #2A4DD0;
+        text-decoration: none;
+        border-bottom: 3px solid #2A4DD0;
+        font-weight: 600;
+        margin: 32px;
+        font-size: 1rem;
+      }
+      .banner .text-content .bottom {
+        font-size: 0.875rem;
+      }
+      .img-content {
+        border: 4px dashed salmon;
+      }
+
+      .author-info {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+        color: rgb(55, 65, 81);
+      }
+
+      .author-info a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="poppins-regular">
+    <header class="header">
+      <!-- navbar section starts -->
+       <nav class="navbar">
+        <div class="nav-image"><img src="resources/logo-light.svg" alt="logo-light"></div>
+        <ul class="nav-list">
+          <li><a href="">About us</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">Resource</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <button class="moon"><img src="resources/Moon_fill_light.svg" alt="Moon_fill_light"></button>
+            <button class="sun"><img src="resources/Sun_fill.svg" alt="Sun_fill"></button>
+        </div>
+       </nav>
+      <!-- navbar section ends -->
+       <!-- banner section starts -->
+        <section class="banner">
+          <div class="text-content">
+            <h5 class="sub-title">😎 Simple way to communicate</h5>
+            <h1 class="title">Actions for Accessibility in Design</h1>
+            <p class="description">The fastest way to build and deploy websites with resusable components.</p>
+            <div class="buttons">
+              <button>Get Started</button><a href="">Get live demo</a>
+            </div>
+            <div class="bottom">
+              <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+              <p>No credit card required</p>
+              <img src="resources/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+              <p>No software to install</p>
+            </div>
+          </div>
+          <div class="img-content">
+              <img src="resources/hero-image-simple-homepage.png" alt="hero-image-simple-homepage" width="730" height="660">
+            </div>
+          </div>
+        </section>
+       <!-- banner section ends -->
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <div class="author-info">
+      Coded by <a href="#">Your Name Here</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </body>
+</html>
