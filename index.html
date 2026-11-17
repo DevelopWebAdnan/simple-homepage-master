@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+<script src="https://kit.fontawesome.com/5b8652802a.js" crossorigin="anonymous"></script>
     <style>
       .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -34,12 +34,62 @@
       body {
         height: 100vh;
         font-size: 1.125rem;
-        color: #111729;
+        /* color: #111729;
+        background-color: #F2F9FE; */
       }
 
-      /* header styles */
-      .header {
+      /* shared styles */
+      /* .light-theme-text-color{ */
+      /* .nav-text-color{ */
+      /* .text-color{
+        color: #111729;
+      } */
+      /* .banner-text-color { */
+      .text-color {
+        color: #223344;
+      }
+      /* .light-theme-bg-color { */
+      .bg-color {
         background-color: #F2F9FE;
+      }
+      /* .primary-color {
+        color: #2A4DD0;
+      } */
+      /* .dark-theme-nav-text-color {
+        color: #FFFFFF;
+      } */
+      /* .dark-theme-banner-text-color { */
+      .dark-theme-text-color {
+        color: #F2F9FE;
+      }
+      .dark-theme-bg-color {
+        background-color: #111729;
+        /* background-color: #223344; */
+      }
+      .hidden {
+        display: none;
+      }
+      .active-toggle {
+        background-color: #F2F9FE;
+        border-radius: 50%;
+        /* color: #F2F9FE; */
+        padding: 2px;
+      }
+      /* .dark-theme-active-toggle {
+        background-color: #F2F9FE;
+      } */
+      .active {
+        color: #2A4DD0;
+        /* text-decoration: underline; */
+        border-bottom: 3px solid #2A4DD0;
+      }
+      .dark-theme-active {
+        color: #FFFFFF;
+        border-bottom: 3px solid #FFFFFF;
+      }
+      /* header styles */
+      #header {
+        /* background-color: #F2F9FE; */
         padding: 24px 50px;
       }
 
@@ -65,35 +115,60 @@
         list-style: none;
         font-weight: 600;
       }
-      .nav-list li a {
+      /* .nav-list li .nav-item { */
+      .nav-item {
         text-decoration: none;
-        color: #111729;
+        /* color: #111729; */
       }
-      .nav-list li:first-of-type a {
+      /* .nav-list li:first-of-type a { */
+      /* .nav-item-1 {
         color: #2A4DD0;
-        /* text-decoration: underline; */
+        text-decoration: underline;
         border-bottom: 3px solid #2A4DD0;
-      }
+      } */
       .hamburger-menu {
         display: none;
       }
       .theme-toggle {
+      /* #theme-toggle { */
         border: 3px dashed darkgoldenrod;
         border-radius: 50px;
         background-color: #223344;
-        padding: 1px;
+        /* background-color: #111729; */
+        padding: 2px;
+        border: none;
+        /* width: 55px; */
+        display: flex;
+        gap: 8px;
+        align-items: center;
       }
       .theme-toggle button {
-        border-radius: 50%;
+      /* #theme-toggle img { */
+        /* border-radius: 50%; */
         border: none;
-        font-size: 1rem;
-        background-color: #223344;
-        padding: 1px;
+        /* font-size: 1rem; */
+        /* background-color: #223344; */
+        background-color: transparent;
+        /* padding: 1px; */
+        /* font-size: 1.125rem; */
+        /* width: 24px; */
+        /* height: 28px; */
       }
       /* .theme-toggle .moon {} */
-      .theme-toggle .sun {
-        /* border-radius: 50px; */
+      /* #btn-sun {
+        border-radius: 50px;
         background-color: #F2F9FE;
+      } */
+      /* #btn-sun-fill img {
+        border-radius: 50%;
+        width: 100%;
+      } */
+      #btn-sun-fill span {
+        /* border-radius: 50%; */
+        /* width: 100%; */
+        color: #F2F9FE;
+        /* font-size: large; */
+        font-size: 1.125rem;
       }
 
       /* banner styles */
@@ -117,7 +192,7 @@
       }
       .banner .text-content .title {
         font-size: 3.75rem;
-        color: #223344;
+        /* color: #223344; */
         margin: 16px 0;
         /* max-width: 300px; */
         /* border: 3px dashed steelblue; */
@@ -126,12 +201,16 @@
         margin: 36px auto 20px;
         font-weight: 500;
       }
-      .banner .text-content .buttons {
-        /* font-size: 1rem;
-        font-weight: 600; */
+      /* .banner .text-content .buttons { */
+      .banner-buttons {
+      /* .buttons { */
+        font-size: 1rem;
+        font-weight: 600;
         margin: 20px auto 36px;
       }
-      .banner .text-content .buttons button {
+      /* .banner .text-content .buttons button { */
+      .banner-buttons button {
+      /* .buttons button { */
         border: none;
         background-color: #2A4DD0;
         color: #F2F9FE;
@@ -141,13 +220,22 @@
         font-size: 1rem;
         text-transform: uppercase;
       }
-      .banner .text-content .buttons a {
-         color: #2A4DD0;
+      /* .banner .text-content .buttons button.btn-live-demo { */
+      /* .buttons button .btn-live-demo { */
+      /* .buttons .btn-live-demo { */
+      /* .banner-buttons .btn-live-demo { */
+      .live-demo {
+         /* color: #2A4DD0; */
         text-decoration: none;
-        border-bottom: 3px solid #2A4DD0;
-        font-weight: 600;
-        margin: 32px;
-        font-size: 1rem;
+        /* border-bottom: 3px solid #2A4DD0; */
+        /* font-weight: 600; */
+        margin: 0 32px;
+        /* font-size: 1rem; */
+        background-color: transparent;
+        /* border: none; */
+        border-radius: 0;
+        padding: 3px 0;
+        text-transform: none;
       }
       .banner .text-content .bottom {
         font-size: 0.875rem;
@@ -186,7 +274,7 @@
 
       /* responsive styles */
       @media screen and (max-width: 640px) {
-        .header {
+        #header {
         /* background-color: #F2F9FE; */
         padding: 12px 4px;
       }
@@ -211,12 +299,12 @@
         /* display: flex; */
         flex-direction: column-reverse;
       }
-      .banner .text-content {
-        /* border: 4px dashed darkkhaki; */
-        /* max-width: 400px; */
-        /* flex: 1; */
-        /* width: 100%; */
-      }
+      /* .banner .text-content {
+        border: 4px dashed darkkhaki;
+        max-width: 400px;
+        flex: 1;
+        width: 100%;
+      } */
        .banner .text-content .title {
         font-size: 2.75rem;
         /* color: #223344;
@@ -258,21 +346,32 @@
       }
     </style>
   </head>
-  <body class="poppins-regular">
-    <header class="header">
+  <body class="poppins-regular text-color bg-color">
+    <header id="header">
       <!-- navbar section starts -->
        <nav class="navbar">
-        <div class="nav-image"><img src="resources/logo-light.svg" alt="logo-light"></div>
+        <div class="nav-image">
+          <img id="logo-light" src="resources/logo-light.svg" alt="logo-light">
+          <img id="logo-dark" class="hidden" src="resources/logo-dark.svg" alt="logo-dark">
+        </div>
         <ul class="nav-list">
-          <li><a href="">About us</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">Resource</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="" class="nav-item active">About us</a></li>
+          <li><a href="" class="nav-item text-color">Product</a></li>
+          <li><a href="" class="nav-item text-color">Resource</a></li>
+          <li><a href="" class="nav-item text-color">Contact</a></li>
         </ul>
         <div class="hamburger-menu"><img src="resources/hamburger-button.svg" alt="hamburger-button"></div>
         <div class="theme-toggle">
-            <button class="moon"><img src="resources/Moon_fill_light.svg" alt="Moon_fill_light"></button>
-            <button class="sun"><img src="resources/Sun_fill.svg" alt="Sun_fill"></button>
+            <button id="btn-moon-fill-light">
+              <img src="resources/Moon_fill_light.svg" alt="Moon_fill_light">
+              </button>
+              <button class="hidden" id="btn-moon-fill">
+              <img src="resources/Moon_fill.svg" alt="Moon_fill">
+            </button>
+            <button id="btn-sun-fill">
+              <img class="active-toggle" src="resources/Sun_fill.svg" alt="Sun_fill">
+              <span class="hidden"><i class="fa-regular fa-sun"></i></span>
+            </button>
         </div>
        </nav>
       <!-- navbar section ends -->
@@ -282,8 +381,9 @@
             <h5 class="sub-title">😎 Simple way to communicate</h5>
             <h1 class="title">Actions for Accessibility in Design</h1>
             <p class="description">The fastest way to build and deploy websites with resusable components.</p>
-            <div class="buttons">
-              <button>Get Started</button><a href="">Get live demo</a>
+            <div class="banner-buttons">
+              <button>Get Started</button>
+              <a href="" class="live-demo active">Get live demo</a>
             </div>
             <div class="bottom">
               <div class="done">
@@ -304,18 +404,16 @@
        <!-- banner section ends -->
     </header>
 
-    <main>
+    <!-- <main></main> -->
 
-    </main>
-
-    <footer>
-
-    </footer>
-    <div class="author-info">
+    <!-- <footer> -->
+          <div class="author-info">
       Coded by <a href="#">Your Name Here</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
     </div>
+    <!-- </footer> -->
+    <script src="/theme.js"></script>
   </body>
 </html>
