@@ -69,6 +69,9 @@
       .hidden {
         display: none;
       }
+      .flex {
+        display: flex;
+      }
       .active-toggle {
         background-color: #F2F9FE;
         border-radius: 50%;
@@ -78,11 +81,6 @@
       /* .dark-theme-active-toggle {
         background-color: #F2F9FE;
       } */
-      .active {
-        color: #2A4DD0;
-        /* text-decoration: underline; */
-        border-bottom: 3px solid #2A4DD0;
-      }
       .dark-theme-active {
         color: #FFFFFF;
         border-bottom: 3px solid #FFFFFF;
@@ -100,22 +98,60 @@
         justify-content: space-between;
         align-items: center;
       }
-      /* .nav-image {
+      /* .nav-logos {
         border: 4px dashed darkmagenta;
       } */
-      .nav-image img {
+      .nav-logos img {
         width: 100%;
       }
-      .nav-list {
-        /* border: 3px dashed steelblue; */
+      .right-side-nav {
+        border: 5px dashed saddlebrown;
+        /* position: relative; */
+      }
+      .sidebar {
+        border: 4px dashed seagreen;
+        height: 100vh;
+        /* height: 100%; */
+        background-color: #FFFFFF;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 400px;
+        text-align: right;
+      }
+      #close-button {
+        margin: 8px 8px 36px 8px;
+      }
+        .nav-list-column {
+          text-align: center;
+        border: 3px dashed darkmagenta;
+        display: flex;
+        gap: 36px;
+        flex-direction: column;
+        font-size: 2.25rem;
+      }
+      .sidebar-togglers {
+        border: 3px dashed darkmagenta;        
+      }
+      /* .hamburger-menu {
+        border: 3px dashed darkmagenta;
+      } */
+      .nav-list-row {
+        border: 3px dashed steelblue;
         display: flex;
         gap: 36px;
       }
-      .nav-list li {
+      .nav-list-row li, .nav-list-column li {
         list-style: none;
         font-weight: 600;
       }
-      /* .nav-list li .nav-item { */
+      .nav-list-column .nav-item {
+        color: #909193;
+      }
+      .nav-item.active {
+        color: #2A4DD0;
+        border-bottom: 3px solid #2A4DD0;
+      }
       .nav-item {
         text-decoration: none;
         /* color: #111729; */
@@ -126,10 +162,10 @@
         text-decoration: underline;
         border-bottom: 3px solid #2A4DD0;
       } */
-      .hamburger-menu {
-        display: none;
-      }
-      .theme-toggle {
+       .sidebar-theme-toggle {
+        margin: 36px auto;
+       }
+      .sidebar-theme-toggle, .theme-toggle {
       /* #theme-toggle { */
         border: 3px dashed darkgoldenrod;
         border-radius: 50px;
@@ -137,12 +173,15 @@
         /* background-color: #111729; */
         padding: 2px;
         border: none;
-        /* width: 55px; */
+        width: 67px;
         display: flex;
         gap: 8px;
         align-items: center;
       }
-      .theme-toggle button {
+      /* .theme-toggle {
+        display: flex;
+      } */
+      .sidebar-theme-toggle button, .theme-toggle button {
       /* #theme-toggle img { */
         /* border-radius: 50%; */
         border: none;
@@ -278,18 +317,35 @@
         /* background-color: #F2F9FE; */
         padding: 12px 4px;
       }
-       .nav-list {
-        /* border: 3px dashed darkmagenta; */
+      .nav-list-row {
         display: none;
-        /* gap: 40px; */
       }
-      .hamburger-menu {
-        display: block;
+      .right-side-nav {
+        display: flex;
       }
+      /* .sidebar-togglers {
+        display: flex;
+      } */
+      /* .hamburger-menu {
+        display: flex;
+      } */
+      /* .sidebar {
+        position: absolute;
+        top: 10px;
+        display: none;
+        height: 100vh;
+      } */
+       /* #close-button{} */
+       /* .nav-list-column {
+        border: 3px dashed darkmagenta;
+        display: flex;
+        gap: 36px;
+        flex-direction: column;
+      } */
       .theme-toggle {
-        /* border: 3px dashed steelblue;
+        /* border: px dashed steelblue;
         border-radius: 50px;
-        background-color: #223344; */
+        background-color: #223344;3 */
         display: none;
       }
       
@@ -350,17 +406,53 @@
     <header id="header">
       <!-- navbar section starts -->
        <nav class="navbar">
-        <div class="nav-image">
+        <div class="nav-logos">
           <img id="logo-light" src="resources/logo-light.svg" alt="logo-light">
           <img id="logo-dark" class="hidden" src="resources/logo-dark.svg" alt="logo-dark">
         </div>
-        <ul class="nav-list">
-          <li><a href="" class="nav-item active">About us</a></li>
-          <li><a href="" class="nav-item text-color">Product</a></li>
-          <li><a href="" class="nav-item text-color">Resource</a></li>
-          <li><a href="" class="nav-item text-color">Contact</a></li>
-        </ul>
-        <div class="hamburger-menu"><img src="resources/hamburger-button.svg" alt="hamburger-button"></div>
+        <ul class="nav-list-row">
+            <!-- <img id="hamburger-menu" class="hidden" src="resources/hamburger-button.svg" alt="hamburger-button"> -->
+            <!-- <img id="close-button" src="resources/close-button.svg" alt="close-button" class="hidden"> -->
+            <li><a href="" class="nav-item active">About us</a></li>
+            <li><a href="" class="nav-item text-color">Product</a></li>
+            <li><a href="" class="nav-item text-color">Resource</a></li>
+            <li><a href="" class="nav-item text-color">Contact</a></li>
+          </ul>
+
+          <div class="right-side-nav hidden">
+            <div class="sidebar-togglers">
+            <img class="hamburger-menu" src="resources/hamburger-button.svg" alt="hamburger-button">
+            <!-- <img id="close-button" src="resources/close-button.svg" alt="close-button" class="hidden"> -->
+              </div>
+             <div class="sidebar hidden">
+              <img id="close-button" src="resources/close-button.svg" alt="close-button" class="">
+          <ul class="nav-list-column ">
+            <!-- <img id="hamburger-menu" class="hidden" src="resources/hamburger-button.svg" alt="hamburger-button"> -->
+            <!-- <img id="close-button" src="resources/close-button.svg" alt="close-button"> -->
+            <li><a href="" class="nav-item active">About us</a></li>
+            <li><a href="" class="nav-item text-color">Product</a></li>
+            <li><a href="" class="nav-item text-color">Resource</a></li>
+            <li><a href="" class="nav-item text-color">Contact</a></li>
+          </ul>
+          <div class="sidebar-theme-toggle hidden">
+            <button id="btn-moon-fill-light">
+              <img src="resources/Moon_fill_light.svg" alt="Moon_fill_light">
+              </button>
+              <button class="hidden" id="btn-moon-fill">
+              <img src="resources/Moon_fill.svg" alt="Moon_fill">
+            </button>
+            <button id="btn-sun-fill">
+              <img class="active-toggle" src="resources/Sun_fill.svg" alt="Sun_fill">
+              <span class="hidden"><i class="fa-regular fa-sun"></i></span>
+            </button>
+        </div>
+        </div>
+         <!-- </div> -->
+          </div>
+        
+        <!-- <div id="hamburger-menu" class="hidden">
+          <img src="resources/hamburger-button.svg" alt="hamburger-button">
+        </div> -->
         <div class="theme-toggle">
             <button id="btn-moon-fill-light">
               <img src="resources/Moon_fill_light.svg" alt="Moon_fill_light">
@@ -415,5 +507,6 @@
     </div>
     <!-- </footer> -->
     <script src="/theme.js"></script>
+    <script src="./hamburger-menu.js"></script>
   </body>
 </html>

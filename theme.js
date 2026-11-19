@@ -1,4 +1,4 @@
-console.log('Added the theme.js file to toggle theme.');
+// console.log('Added the theme.js file to toggle theme.');
 
 // document.getElementById('theme-toggle').addEventListener('click', function() {
 const moonFillLightBtn = document.getElementById('btn-moon-fill-light');
@@ -6,18 +6,18 @@ const moonFillBtn = document.getElementById('btn-moon-fill');
 const sunFillBtn = document.getElementById('btn-sun-fill');
 
 const navItems = document.getElementsByClassName('nav-item');
-    console.log(navItems);
+    // console.log(navItems);
     const navItem1 = document.getElementsByClassName('nav-item')[0];
-    console.log(navItem1);
+    // console.log(navItem1);
 
     const moonFillBtnImg = moonFillBtn.querySelector('#btn-moon-fill img');
-    console.log(moonFillBtnImg);
+    // console.log(moonFillBtnImg);
     const sunFillBtnImg = sunFillBtn.querySelector('#btn-sun-fill img');
     const sunFillLightBtnImg = sunFillBtn.querySelector('#btn-sun-fill span');
-    console.log(sunFillBtnImg, sunFillLightBtnImg);
+    // console.log(sunFillBtnImg, sunFillLightBtnImg);
 
         const liveDemo = document.getElementsByClassName('live-demo')[0]
-    console.log(liveDemo);
+    // console.log(liveDemo);
 
 moonFillLightBtn.addEventListener('click', function() {
     console.log('Clicked on the moon-fill-light button to toggle the theme');
