@@ -81,10 +81,10 @@
       /* .dark-theme-active-toggle {
         background-color: #F2F9FE;
       } */
-      .dark-theme-active {
+      /* .dark-theme-active {
         color: #FFFFFF;
         border-bottom: 3px solid #FFFFFF;
-      }
+      } */
       /* header styles */
       #header {
         /* background-color: #F2F9FE; */
@@ -114,19 +114,19 @@
         /* height: 100%; */
         background-color: #FFFFFF;
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 400px;
+        right: 0px;
+        top: 0px;
+        width: 450px;
         text-align: right;
       }
       #close-button {
-        margin: 8px 8px 36px 8px;
+        margin: 8px 8px 60px 8px;
       }
         .nav-list-column {
           text-align: center;
         border: 3px dashed darkmagenta;
         display: flex;
-        gap: 36px;
+        gap: 60px;
         flex-direction: column;
         font-size: 2.25rem;
       }
@@ -137,9 +137,9 @@
         border: 3px dashed darkmagenta;
       } */
       .nav-list-row {
-        border: 3px dashed steelblue;
+        /* border: 3px dashed steelblue; */
         display: flex;
-        gap: 36px;
+        gap: 60px;
       }
       .nav-list-row li, .nav-list-column li {
         list-style: none;
@@ -147,10 +147,6 @@
       }
       .nav-list-column .nav-item {
         color: #909193;
-      }
-      .nav-item.active {
-        color: #2A4DD0;
-        border-bottom: 3px solid #2A4DD0;
       }
       .nav-item {
         text-decoration: none;
@@ -162,8 +158,18 @@
         text-decoration: underline;
         border-bottom: 3px solid #2A4DD0;
       } */
+
+       .active, .nav-item.active {
+       /* .active { */
+        color: #2A4DD0;
+        border-bottom: 3px solid #2A4DD0;
+      }
+      .dark-theme-active {
+        color: #FFFFFF;
+        border-bottom: 3px solid #FFFFFF;
+      }
        .sidebar-theme-toggle {
-        margin: 36px auto;
+        margin: 60px auto;
        }
       .sidebar-theme-toggle, .theme-toggle {
       /* #theme-toggle { */
@@ -173,7 +179,7 @@
         /* background-color: #111729; */
         padding: 2px;
         border: none;
-        width: 67px;
+        width: 66px;
         display: flex;
         gap: 8px;
         align-items: center;
@@ -386,7 +392,7 @@
       .banner .img-content {
         /* border: 4px dashed salmon;
         flex: 1; */
-        width: 75%;
+        width: 50%;
         margin: 0 auto;
       }
       }
@@ -434,14 +440,14 @@
             <li><a href="" class="nav-item text-color">Resource</a></li>
             <li><a href="" class="nav-item text-color">Contact</a></li>
           </ul>
-          <div class="sidebar-theme-toggle hidden">
-            <button id="btn-moon-fill-light">
+          <div class="sidebar-theme-toggle">
+            <button id="sidebar-btn-moon-fill-light">
               <img src="resources/Moon_fill_light.svg" alt="Moon_fill_light">
               </button>
-              <button class="hidden" id="btn-moon-fill">
+              <button class="hidden" id="sidebar-btn-moon-fill">
               <img src="resources/Moon_fill.svg" alt="Moon_fill">
             </button>
-            <button id="btn-sun-fill">
+            <button id="sidebar-btn-sun-fill">
               <img class="active-toggle" src="resources/Sun_fill.svg" alt="Sun_fill">
               <span class="hidden"><i class="fa-regular fa-sun"></i></span>
             </button>
